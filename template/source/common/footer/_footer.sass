@@ -1,0 +1,32 @@
+.footer
+  position: relative
+  background-color: colors($footer-color, #ffffff)
+  padding: 25px 0
+
+  &__container
+    +container
+
+  &__box
+    display: flex
+    width: 100%
+    flex-wrap: wrap
+    justify-content: center
+
+  &__item
+    padding: 0 15px
+    width: 50%
+
+    &:first-of-type
+      +MAX(969px)
+        order: 2
+    &:last-of-type
+      +MAX(969px)
+        order: 1
+
+  &__text
+    font-size: 18px
+    font-weight: 300
+    color: colors($footer-color)
+    margin-bottom: 5px
+    text-align: justify
+    cursor: default

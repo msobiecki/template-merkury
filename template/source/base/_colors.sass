@@ -1,0 +1,48 @@
+@charset "UTF-8"
+
+@function hsb($h-hsb, $s-hsb, $b-hsb, $a: 1)
+  @if $b-hsb == 0
+    @return hsla(0, 0, 0, $a)
+  @else
+    $l-hsl: ($b-hsb/2) * (2 - ($s-hsb/100))
+    $s-hsl: ($b-hsb * $s-hsb) / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2)
+    @return hsla($h-hsb, $s-hsl, $l-hsl, $a)
+
+@function colors($color, $tone: "base")
+  @return map-get($color, $tone)
+
+// e.g. $button: (base: white, hover: black, shadow: yellow, shadowHover: darken(yellow, 5))
+// usage: color: colors($button, hover)
+
+$text-color: (base: #8492af, title: #0e1a35)
+
+// Page Loader Color
+$loader-background: (base: #0e1a35)
+
+// Header Colors
+$header-colors: (base: white, landingPage: transparent, landingPage-background: #0e1a35)
+
+// Menu Colors
+$menu-color: (base: #ffffff, hover: #5584ff, alternative: #ffffff, submenu-link: #0e1a35, submenu-background: #ffffff,  border-base: rgba(255, 255, 255, 0.5), border-hover: rgba(255, 255, 255, 1), border-alternative: #5584ff, background-base: transparent, background-hover: rgba(255, 255, 255, 1), background-alternative: #5584ff)
+
+// Navigation-Toggle
+$navigation-toggle-color: (base: #ffffff, hover: #ffffff)
+
+// Banner Colors
+$banner-color: (base: #ffffff, shadow: rgba(150, 150, 150, 1), button-color: #ffffff, button-background: #5584ff, button-border: #5584ff, button-color-hover: white, button-background-hover: transparent, button-border-hover: white)
+
+// Features Colors
+$features-color: (base: #8492af, subtitle: #0e1a35, background: #fcfcfd, button-color: #0e1a35, button-background: transparent, button-border: #dadee7, button-color-hover: #ffffff,button-background-hover: #5584ff, button-border-hover: #5584ff )
+
+// Services Colors
+$services-color: (base: #8492af, title: #0e1a35, list: #5584ff, number-border: #5584ff, background: #f6f7fa)
+
+// Halfbox Colors
+$halfbox-color: (base: #5e6372, subtitle: #cb0035, background: #f6f6f6, imageBg: #cb0035, button-color: #ffffff, button-background: #264699)
+
+// Newsletter Colors
+$newsletter-color: (base: #ffffff, input-border: rgba(255, 255, 255, .5), input-background: rgba(255, 255, 255, .3), submit-background: #ffffff, submit-color: #cb0035, submit-background-hover: #cb0035, submit-color-hover: #ffffff )
+
+// Footer Colors
+$footer-color: (base: #a7acbc, background: #ffffff)
+

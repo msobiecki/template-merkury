@@ -1,0 +1,23 @@
+.navigation-toggle
+  outline: none
+  height: 44px
+  width: 44px
+  padding: 0
+
+  &__inner
+    transition: background-color .5s ease-in-out !important
+    background-color: colors($navigation-toggle-color)
+    .-header-landingPage-background &
+      background-color: colors($navigation-toggle-color, hover)
+
+    &:after
+      transition: background-color .5s ease-in-out !important
+      background-color: colors($navigation-toggle-color)
+      .-header-landingPage-background &
+        background-color: colors($navigation-toggle-color, hover)
+
+    &:before
+      transition: background-color .5s ease-in-out !important
+      background-color: colors($navigation-toggle-color)
+      .-header-landingPage-background &
+        background-color: colors($navigation-toggle-color, hover)
