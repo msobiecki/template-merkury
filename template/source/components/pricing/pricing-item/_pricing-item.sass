@@ -1,0 +1,49 @@
+.pricing-item
+  display: block
+  width: 100%
+  box-shadow: 0px 0px 60px rgba(0,0,0,.15)
+  padding: 10px
+
+  &__title
+    font-size: 24px
+    color: colors($pricing-color, title)
+    text-align: center
+    margin-top: 15px
+    margin-bottom: 10px
+
+  &__amount
+    font-weight: bold
+    color: colors($pricing-color, title)
+    font-size: 72px
+    text-align: center
+    line-height: 1
+
+  &__currency
+    font-size: 40px
+
+  &__per
+    font-weight: normal
+    font-size: 24px
+    color: colors($pricing-color)
+
+  &__list
+    padding: 20px
+
+  &__option
+    display: flex
+    align-items: flex-start
+    padding: 5px 0
+    font-size: 16px
+    i
+      color: colors($pricing-color, icon)
+      border: 2px solid colors($pricing-color, icon)
+      border-radius: 100%
+      font-size: 16px
+      margin-right: 5px
+
+    &.-option-yes i
+      color: colors($pricing-color, icon-yes)
+      border: 2px solid colors($pricing-color, icon-yes)
+    &.-option-no i
+      color: colors($pricing-color, icon-no)
+      border: 2px solid colors($pricing-color, icon-no)

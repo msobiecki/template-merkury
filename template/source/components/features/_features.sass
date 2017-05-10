@@ -1,4 +1,5 @@
 .features
+  +component
   background-color: colors($features-color, background)
 
   &__container
@@ -8,7 +9,6 @@
     display: flex
     flex-wrap: wrap
     margin: 0 -15px
-    padding: 55px 0 55px
 
   &__item
     position: relative
@@ -68,23 +68,4 @@
     right: 0
 
   &__button
-    transition: background-color .15s ease-in-out, color .15s ease-in-out, border .15s ease-in-out
-    color: colors($features-color, button-color)
-    background-color: colors($features-color, button-background)
-    font-size: 18px
-    border: 1px solid colors($features-color, button-border)
-    margin: 5px
-    border-radius: 30px
-    display: flex
-    align-items: center
-    justify-content: center
-    padding: 0 25px
-    height: 50px
-    line-height: 1
-    i
-      margin-right: 5px
-
-    &:hover
-      color: colors($features-color, button-color-hover)
-      background-color: colors($features-color, button-background-hover)
-      border: 1px solid colors($features-color, button-border-hover)
+    +button-alt
