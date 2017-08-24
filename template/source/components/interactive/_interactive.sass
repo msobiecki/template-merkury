@@ -1,5 +1,8 @@
 .interactive
   +component
+  background: #f6f7fa
+  background: linear-gradient(to bottom, #f6f7fa 65%,#ffffff 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f7fa', endColorstr='#ffffff',GradientType=0 )
 
   &__container
     +container
@@ -9,3 +12,30 @@
 
   &__text
     +component-text
+
+  &__box
+    display: block
+    width: 100%
+    text-align: center
+
+    padding: 15px 0
+
+  &__item
+    display: inline-block
+    position: relative
+
+  &__image
+    display: block
+    max-width: 100%
+    height: auto
+
+  &__tooltipBox
+    position: relative
+    display: inline-block
+    width: 100%
+
+    &:not(:empty)
+      height: 53px
+    .interactive__container &
+      height: inherit !important
+

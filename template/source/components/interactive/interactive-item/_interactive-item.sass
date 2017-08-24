@@ -1,0 +1,89 @@
+.interactive-item
+  display: none
+  
+  &__buttonholder
+    transition: border .15s ease-in-out
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 46px
+    height: 46px
+    border: 8px solid rgba(85, 132, 255, 0.1)
+    border-radius: 100%
+
+    &:hover
+      border: 8px solid rgba(85, 132, 255, 0.4)
+
+    .-opened &
+      border: 8px solid rgba(85, 132, 255, 0.5)
+
+
+  &__button
+    cursor: pointer
+    width: 100%
+    height: 100%
+    background-color: #5584ff
+    border-radius: 100%
+
+
+  &__buttonImage
+    display: block
+    width: 28px
+    height: 27px
+
+    &.-plus
+      .-opened &
+        display: none
+
+    &.-minus
+      display: none
+      .-opened &
+        display: block
+
+  &__tooltip
+    display: none
+    position: absolute
+    left: 50%
+    bottom: calc(100% + 15px)
+    transform: translate(-50%, 0)
+    +MAX(767px)
+      top: 0
+
+    &.-tooltip-open
+      display: block
+      +MAX(767px)
+        display: none
+
+    .interactive__tooltipBox &.-tooltip-open
+      display: none
+      +MAX(767px)
+        display: block
+
+  &__tooltipBox
+    background-color: #5584ff
+    color: #ffffff
+    font-size: 14px
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.33)
+    padding: 15px 20px
+    width: 100%
+    min-width: 230px
+    max-width: 300px
+    position: relative
+    cursor: default
+
+    &:after
+      content: " "
+      width: 0
+      height: 0
+      position: absolute
+      top: 100%
+      left: 50%
+      transform: translate(-50%,0)
+      border-left: 10px solid transparent
+      border-top: 10px solid #5584ff
+      border-right: 10px solid transparent
+      border-bottom: 10px solid transparent
+
+    +MAX(767px)
+      &:after
+        content: none
