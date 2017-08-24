@@ -1,3 +1,3 @@
-# Template-DroneZone
+# Template-Merkury
 
-![preview](http://i.imgur.com/TdzoTq8.jpg)
+![preview](http://i.imgur.com/NMyjvvo.jpg)
